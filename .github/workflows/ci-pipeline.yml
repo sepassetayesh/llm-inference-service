@@ -26,8 +26,8 @@ jobs:
 
       # Step 3: Build the Docker image
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/my-app:latest .
+        run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/llm-inference-image:latest .
 
       # Step 4: Push the Docker image to Docker Hub
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/my-app:latest
+        run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/llm-inference-image:latest
